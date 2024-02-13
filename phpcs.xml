@@ -11,6 +11,8 @@
   <!-- Ignore WordPress and Composer dependencies -->
   <exclude-pattern>web/wp</exclude-pattern>
   <exclude-pattern>web/app/themes/twentytwentyfour/</exclude-pattern>
+  <!-- Ignore plugins, since we develop those in their own space. -->
+  <exclude-pattern>web/app/plugins/</exclude-pattern>
   <exclude-pattern>vendor/</exclude-pattern>
 
   <!-- Show colors in console -->
