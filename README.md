@@ -19,6 +19,14 @@ If you want to install our plugins, run `lando install-plugins`.
 Create an mu-plugin for Gravityforms hooks and use this: https://github.com/basmiddelham/gravityforms-bootstrap-styling
 If you're using Bootstrap, don't forget to add the SCSS.
 
+## Useful Links
+
+### Navi 
+https://github.com/Log1x/navi
+
+### ACF Composer
+https://github.com/Log1x/acf-composer
+
 <hr>
 
 <p align="center">
