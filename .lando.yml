@@ -21,6 +21,9 @@ services:
     build:
       - npm install
   appserver:
+    config:
+      php: .vscode/php.ini
+  appserver:
     overrides:
       # See: https://github.com/docker/for-linux/issues/264#issuecomment-763555307
       extra_hosts:
