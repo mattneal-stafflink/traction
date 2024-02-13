@@ -1,3 +1,4 @@
 {
-    "lando-ui.workspaceFolder.default": ""
+    "lando-ui.workspaceFolder.default": "",
+	"phpcs.executablePath": "vendor/bin/phpcs",
 }
