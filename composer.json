@@ -1,10 +1,15 @@
 {
-  "name": "roots/bedrock",
+  "name": "mattneal-stafflink/traction",
   "type": "project",
   "license": "MIT",
-  "description": "WordPress boilerplate with Composer, easier configuration, and an improved folder structure",
-  "homepage": "https://roots.io/bedrock/",
+  "description": "WordPress boilerplate with Composer, easier configuration, and an improved folder structure, based on Roots/Bedrock",
+  "homepage": "https://digitaltraction.com.au/",
   "authors": [
+    {
+      "name": "Matt Neal",
+      "email": "matt.neal@stafflink.com.au",
+      "homepage": "https://github.com/mattneal-stafflink"
+    },
     {
       "name": "Scott Walkinshaw",
       "email": "scott.walkinshaw@gmail.com",
@@ -17,7 +22,7 @@
     }
   ],
   "keywords": [
-    "bedrock", "composer", "roots", "wordpress", "wp", "wp-config"
+    "bedrock", "composer", "roots", "wordpress", "wp", "wp-config", "stafflink", "lando"
   ],
   "support": {
     "issues": "https://github.com/roots/bedrock/issues",
