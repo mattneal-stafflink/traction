@@ -9,15 +9,15 @@ Add your credentials for Satispress to the `.auth.json.example` and remove the `
 
 Generate Salts for your `.lando.env` environment variables file. https://roots.io/salts.html
 
-## Plugin Recommendations
-
-Create an mu-plugin for Gravityforms hooks and use this: https://github.com/basmiddelham/gravityforms-bootstrap-styling
-If you're using Bootstrap, don't forget to add the SCSS.
-
 ```
 lando start
 ```
 If you want to install our plugins, run `lando install-plugins`.
+
+## Plugin Recommendations
+
+Create an mu-plugin for Gravityforms hooks and use this: https://github.com/basmiddelham/gravityforms-bootstrap-styling
+If you're using Bootstrap, don't forget to add the SCSS.
 
 <hr>
 
