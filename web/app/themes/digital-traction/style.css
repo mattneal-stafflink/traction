@@ -1,32 +1,5 @@
 /*
-Theme Name: Digital Traction
-Author: Matt Neal
-Author URI: https://github.com/mattneal-stafflink/
-Theme URI: https://github.com/mattneal-stafflink/traction
-Tags: full-site-editing, editor-style, block-styles, block-patterns
-Text Domain: digital-traction
-Requires at least: 6.3
-Requires PHP: 7.4
-Tested up to: 6.3
-Version: 1.0.0
-
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Theme Name: My Timber 2.x Starter Theme
+ * Description: Starter Theme to use with Timber
+ * Author: Upstatement and YOU!
 */
-
-/* Styles intended only for the front.*/
-html {
-	scroll-behavior: smooth;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-
-	html {
-		scroll-behavior: auto;
-	}
-}
-
-body {
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-}

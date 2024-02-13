@@ -1,79 +1,17 @@
 <?php
 /**
- * Functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package digital-traction
- * @since 1.0.0
+ * Timber starter-theme
+ * https://github.com/timber/starter-theme
  */
 
-/**
- * The theme version.
- *
- * @since 1.0.0
- */
-define( 'DIGITAL_TRACTION_VERSION', wp_get_theme()->get( 'Version' ) );
+// Load Composer dependencies.
+require_once __DIR__ . '/vendor/autoload.php';
 
-/**
- * Add theme support for block styles and editor style.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function digital_traction_setup() {
-	add_editor_style( './assets/css/style-shared.min.css' );
+require_once __DIR__ . '/src/StarterSite.php';
 
-	/*
-	 * Load additional block styles.
-	 * See details on how to add more styles in the readme.txt.
-	 */
-	$styled_blocks = [ 'button', 'quote', 'navigation', 'search' ];
-	foreach ( $styled_blocks as $block_name ) {
-		$args = array(
-			'handle' => "digital-traction-$block_name",
-			'src'    => get_theme_file_uri( "assets/css/blocks/$block_name.min.css" ),
-			'path'   => get_theme_file_path( "assets/css/blocks/$block_name.min.css" ),
-		);
-		// Replace the "core" prefix if you are styling blocks from plugins.
-		wp_enqueue_block_style( "core/$block_name", $args );
-	}
+Timber\Timber::init();
 
-}
-add_action( 'after_setup_theme', 'digital_traction_setup' );
+// Sets the directories (inside your theme) to find .twig files.
+Timber::$dirname = [ 'templates', 'views' ];
 
-/**
- * Enqueue the CSS files.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function digital_traction_styles() {
-	wp_enqueue_style(
-		'digital-traction-style',
-		get_stylesheet_uri(),
-		[],
-		DIGITAL_TRACTION_VERSION
-	);
-	wp_enqueue_style(
-		'digital-traction-shared-styles',
-		get_theme_file_uri( 'assets/css/style-shared.min.css' ),
-		[],
-		DIGITAL_TRACTION_VERSION
-	);
-}
-add_action( 'wp_enqueue_scripts', 'digital_traction_styles' );
-
-// Filters.
-require_once get_theme_file_path( 'inc/filters.php' );
-
-// Block variation example.
-require_once get_theme_file_path( 'inc/register-block-variations.php' );
-
-// Block style examples.
-require_once get_theme_file_path( 'inc/register-block-styles.php' );
-
-// Block pattern and block category examples.
-require_once get_theme_file_path( 'inc/register-block-patterns.php' );
+new StarterSite();
