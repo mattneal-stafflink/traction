@@ -3,6 +3,15 @@
 	// for the documentation about the extensions.json format
 	"recommendations": [
 		"editorconfig.editorconfig",
-    	"shevaua.phpcs",
+		"shevaua.phpcs",
+		"bmewburn.vscode-intelephense-client",
+		"persoderlind.vscode-phpcbf",
+		"neilbrayfield.php-docblocker",
+		"oderwat.indent-rainbow",
+		"wix.vscode-import-cost",
+		"GitHub.copilot",
+		"GitHub.copilot-chat",
+		"emilast.LogFileHighlighter",
+		"rifi2k.format-html-in-php",
 	]
 }
