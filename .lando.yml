@@ -20,7 +20,7 @@ services:
     type: node
     build:
       - npm install
-  appserver:
+  phpini:
     config:
       php: .vscode/php.ini
   appserver:
