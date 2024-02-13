@@ -1,4 +1,7 @@
 {
+    "php.suggest.basic": false,
+    "intelephense.formatProvider.enable": false,
+    "editor.quickSuggestions": { "comments": true },
     "[php]": {
         "editor.formatOnSave": false,
         "editor.formatOnPaste": false
