@@ -1,0 +1,8 @@
+{
+    "http-basic": {
+        "composer.stafflink.io": {
+            "username": "SATISPRESS_KEY_HERE",
+            "password": "SATISPRESS_PASSWORD_HERE"
+        }
+    }
+}

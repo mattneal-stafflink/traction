@@ -1,8 +1,8 @@
-# Be sure to update "traction" to your website name.
-name: traction
+# Be sure to update "bedrocktraction" to your website name.
+name: bedrocktraction
 recipe: wordpress
 env_file:
-  - .env
+  - .lando.env
 excludes:
   - vendor
   - node_modules
@@ -65,6 +65,11 @@ tooling:
       - appserver: wp cache flush
       - cache: redis-cli FLUSHDB
     dir: /web
+  install-plugins:
+    service: appserver
+    description: Install all base plugins.
+    cmd: >-
+      lando composer require wpackagist-plugin/spinupwp wpackagist-plugin/limit-login-attempts-reloaded wpackagist-plugin/wp-ses wpackagist-plugin/simple-history wpackagist-plugin/seo-by-rank-math wpackagist-plugin/advanced-custom-fields wpackagist-plugin/patchstack wpackagist-plugin/amazon-s3-and-cloudfront wpackagist-plugin/easy-property-listings wpackagist-plugin/easy-property-listings-xml-csv-import wpackagist-plugin/import-xml-csv-settings-to-rank-math-seo wpackagist-plugin/akismet wpackagist-plugin/index-wp-mysql-for-speed wpackagist-plugin/admin-site-enhancements
   login-live: #Before using this command, make sure to update the SSH credentials and path!
     service: appserver
     description: generate a login link for the live URL.

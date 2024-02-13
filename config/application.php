@@ -121,6 +121,25 @@ Config::define('DISALLOW_FILE_MODS', true);
 // Limit the number of post revisions
 Config::define('WP_POST_REVISIONS', env('WP_POST_REVISIONS') ?? true);
 
+// Offload SES Access Key and Secret
+Config::define('WPOSES_AWS_SECRET_ACCESS_KEY', env('WPOSES_AWS_SECRET_ACCESS_KEY') ?: false);
+Config::define('WPOSES_AWS_ACCESS_KEY_ID', env('WPOSES_AWS_ACCESS_KEY_ID') ?: false);
+Config::define('WPOSES_HIDE_VERIFIED', env('WPOSES_HIDE_VERIFIED') ?: false);
+
+// Store your Google Maps Key in your .env.
+Config::define('GOOGLE_MAPS_API_KEY', env('GOOGLE_MAPS_API_KEY'));
+
+// Digital Ocean Spaces
+Config::define('DO_SPACES_KEY', env('DO_SPACES_KEY') ?: false);
+Config::define('DO_SPACES_SECRET', env('DO_SPACES_SECRET') ?: false);
+
+// Set the provider to Digital Ocean Spaces.
+define('AS3CF_SETTINGS', serialize(array(
+    'provider' => 'do',
+    'access-key-id' => Config::get('DO_SPACES_KEY'),
+    'secret-access-key' => Config::get('DO_SPACES_SECRET'),
+)));
+
 /**
  * Debugging Settings
  */
