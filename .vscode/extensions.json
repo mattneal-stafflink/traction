@@ -13,5 +13,10 @@
 		"GitHub.copilot-chat",
 		"emilast.LogFileHighlighter",
 		"rifi2k.format-html-in-php",
+		"pranaygp.vscode-css-peek",
+		"Gruntfuggly.todo-tree",
+		"stylelint.vscode-stylelint",
+		"mblode.twig-language-2",
+		"monosans.djlint",
 	]
 }
