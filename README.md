@@ -1,3 +1,21 @@
+## STAFFLINK Web Services Boilerplate
+
+```
+git clone git@github.com:mattneal-stafflink/traction.git && cd traction && code .
+```
+cmd+shift+f and search/replace `bedrocktraction` with your websites' domain name. For example, if your domain is `stafflink.com.au`, replace `bedrocktraction` with `stafflink`.
+
+Add your credentials for Satispress to the `.auth.json.example` and remove the `.example` extension from this file.
+
+Generate Salts for your `.lando.env` environment variables file. https://roots.io/salts.html
+
+```
+lando start
+```
+If you want to install our plugins, run `lando install-plugins`.
+
+<hr>
+
 <p align="center">
   <a href="https://roots.io/bedrock/">
     <img alt="Bedrock" src="https://cdn.roots.io/app/uploads/logo-bedrock.svg" height="100">
