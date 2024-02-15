@@ -31,10 +31,6 @@
   "repositories": [
     {
       "type": "composer",
-      "url": "https://composer.stafflink.io/satispress/"
-    },
-    {
-      "type": "composer",
       "url": "https://wpackagist.org",
       "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
     }
