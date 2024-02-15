@@ -1,0 +1,23 @@
+// Add your own, and overwrite Bootstrap variables here.
+@import "theme/theme_variables";    // <---
+
+// Loads Bootstrap.
+@import "theme/bootstrap";
+
+// Loads the Traction defaults. Classes to incorporate BS in WP
+@import "theme/traction";
+
+// Necessary Bootstrap colour classes.
+@import "theme/colours";
+
+// Add Bootstrap styles to blocks.
+@import "theme/blocks";
+
+// Additional import files live here. Add yours here.
+@import "theme/theme";
+
+// Import Bootstrap Icons.
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+// WooCommerce style fixes. Uncomment if using WooCommerce.
+// @import "theme/woocommerce";
