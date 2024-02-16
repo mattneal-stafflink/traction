@@ -1,11 +1,13 @@
 <?php
 
 use Timber\Site;
+use Timber\Timber;
 
 /**
- * Class StarterSite
+ * Class TractionSite
  */
-class StarterSite extends Site {
+class TractionSite extends Site {
+
 	public function __construct() {
 		add_action( 'after_setup_theme', array( $this, 'theme_supports' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
@@ -13,7 +15,7 @@ class StarterSite extends Site {
 
 		add_filter( 'timber/context', array( $this, 'add_to_context' ) );
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
-		add_filter( 'timber/twig/environment/options', [ $this, 'update_twig_environment_options' ] );
+		add_filter( 'timber/twig/environment/options', array( $this, 'update_twig_environment_options' ) );
 
 		parent::__construct();
 	}
@@ -22,14 +24,12 @@ class StarterSite extends Site {
 	 * This is where you can register custom post types.
 	 */
 	public function register_post_types() {
-
 	}
 
 	/**
 	 * This is where you can register custom taxonomies.
 	 */
 	public function register_taxonomies() {
-
 	}
 
 	/**
@@ -41,8 +41,9 @@ class StarterSite extends Site {
 		$context['foo']   = 'bar';
 		$context['stuff'] = 'I am a value set in your functions.php file';
 		$context['notes'] = 'These values are available everytime you call Timber::context();';
-		$context['menu']  = Timber::get_menu();
+		$context['menu']  = Timber::get_menu( 'primary' );
 		$context['site']  = $this;
+		$context['logo']  = Timber::get_post( get_theme_mod( 'custom_logo' ) );
 
 		return $context;
 	}
@@ -99,6 +100,8 @@ class StarterSite extends Site {
 		);
 
 		add_theme_support( 'menus' );
+		add_theme_support( 'custom-logo' );
+		add_theme_support( 'widgets' );
 	}
 
 	/**
@@ -119,11 +122,12 @@ class StarterSite extends Site {
 	public function add_to_twig( $twig ) {
 		/**
 		 * Required when you want to use Twig’s template_from_string.
+		 *
 		 * @link https://twig.symfony.com/doc/3.x/functions/template_from_string.html
 		 */
 		// $twig->addExtension( new Twig\Extension\StringLoaderExtension() );
 
-		$twig->addFilter( new Twig\TwigFilter( 'myfoo', [ $this, 'myfoo' ] ) );
+		$twig->addFilter( new Twig\TwigFilter( 'myfoo', array( $this, 'myfoo' ) ) );
 
 		return $twig;
 	}
@@ -138,8 +142,8 @@ class StarterSite extends Site {
 	 * @return array
 	 */
 	function update_twig_environment_options( $options ) {
-	    // $options['autoescape'] = true;
+		// $options['autoescape'] = true;
 
-	    return $options;
+		return $options;
 	}
 }

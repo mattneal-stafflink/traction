@@ -2,11 +2,6 @@ body {
 	overflow-x: hidden; // Fix for Windows Chrome horizontal scrollbar.
 }
 
-// Some basic padding for all wrappers
-.wrapper {
-	padding: $grid-gutter-width 0;
-}
-
 // Reset hero wrapper padding to 0
 #wrapper-hero {
 	padding: 0 !important;

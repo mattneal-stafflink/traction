@@ -4,25 +4,26 @@
 @import "theme/theme_variables";
 
 // Grab a few bootstrap assets so we can use mixins, variables, etc
-@import "assets/bootstrap5/functions";
-@import "assets/bootstrap5/variables";
-@import "assets/bootstrap5/maps";
-@import "assets/bootstrap5/mixins";
-@import "assets/bootstrap5/reboot";
-@import "assets/bootstrap5/root";
-@import "assets/bootstrap5/tables";
-@import "assets/bootstrap5/images";
-@import "assets/bootstrap5/containers";
-@import "assets/bootstrap5/grid";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
 
 // Set up basic typography
-@import "assets/bootstrap5/type";
+@import "../../node_modules/bootstrap/scss/type";
 
 // Set up bootstrap utilities
-@import "assets/bootstrap5/bootstrap-utilities";
+@import "../../node_modules/bootstrap/scss/bootstrap-utilities";
 
 // Start bringing in colors and styles.
-@import "theme/colors";
+@import "theme/colours";
 @import "theme/blocks";
 
 // Fixes Gutenberg's cover block color picker.

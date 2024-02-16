@@ -14,15 +14,12 @@ config:
   xdebug: true
   webroot: web
 services:
-  ezmode:
+  phpmyadmin:
     type: phpmyadmin
   node:
     type: node
     build:
       - npm install
-  phpini:
-    config:
-      php: .vscode/php.ini
   appserver:
     overrides:
       # See: https://github.com/docker/for-linux/issues/264#issuecomment-763555307
@@ -33,7 +30,9 @@ services:
         XDEBUG_MODE: "${XDEBUG_MODE:-develop,debug}"
         XDEBUG_CONFIG: "${XDEBUG_CONFIG:-client_host=host.docker.internal discover_client_host=true}"
     build:
-      - composer install --working-dir=/app --no-progress --no-interaction --no-progress
+      - composer install --working-dir=/ --no-progress --no-interaction --no-progress
+    config:
+      php: .vscode/php.ini
   build:
     type: node:18
     ssl: true
@@ -56,8 +55,8 @@ tooling:
     cmd:
       - npm install
       - npm run watch
-    # Be sure to update "carbonfields" to your theme name.
-    dir: /app/web/app/themes/carbonfields
+    # Be sure to update "bedrocktraction" to your theme name.
+    dir: /app/web/app/themes/digital-traction
   redis-cli:
     service: cache
   flush:
