@@ -3,11 +3,11 @@
 const pkg = require( '../../package.json' );
 const year = new Date().getFullYear();
 
-function getBanner( pluginFilename ) {
+function getBanner() {
 	return `/*!
- * Digital Traction${ pluginFilename ? ` ${ pluginFilename }` : '' } v${ pkg.version } (${ pkg.homepage })
- * Copyright 2023-${ year } ${ pkg.author }
- * Licensed under ${ pkg.license } (${ pkg.licenseUrl })
+ * Digital Traction (${ pkg.homepage })
+ * Copyright 2023-${ year } Matthew Neal
+ * Licensed under ${ pkg.license }
  */`;
 }
 

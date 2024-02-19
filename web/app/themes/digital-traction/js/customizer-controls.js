@@ -13,13 +13,8 @@
 				'understrap_navbar_type',
 				function ( control ) {
 					const visibility = function () {
-						if ( 'bootstrap5' === setting.get() ) {
-							control.container.slideDown( 180 );
-						} else {
-							control.container.slideUp( 180 );
-						}
+						control.container.slideDown( 180 );
 					};
-
 					visibility();
 					setting.bind( visibility );
 				}

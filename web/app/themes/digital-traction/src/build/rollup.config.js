@@ -45,6 +45,7 @@ const plugins = [
 
 module.exports = {
 	input: [
+		path.resolve( __dirname, `../js/${ bsSrcFile }` ),
 		path.resolve( __dirname, '../js/skip-link-focus-fix.js' ),
 		path.resolve( __dirname, '../js/custom-javascript.js' ),
 	],

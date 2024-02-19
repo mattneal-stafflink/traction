@@ -8,6 +8,7 @@
 	<header class="header">
 		{% block header %}
 			<div class="wrapper">
+
 				<nav id="nav-main" class="navbar navbar-expand-lg bg-body-tertiary">
 					<div class="container-fluid">
 						<a class="navbar-brand" href="{{site.url}}">
@@ -28,20 +29,14 @@
 					</div>
 				</nav>
 
-				<!-- #nav -->
 			</div>
 		{% endblock %}
 	</header>
 
-	<section id="content" role="main" class="content-wrapper">
-		{% if title %}
-			<h1>{{title}}</h1>
-		{% endif %}
-		<div class="wrapper">
-			{% block content %}
-				Sorry, no content
-			{% endblock %}
-		</div>
+	<section id="content" role="main" class="wrapper">
+		{% block content %}
+			Sorry, no content
+		{% endblock %}
 		{% if sidebar %}
 			<aside class="layout-sidebar">
 				{{sidebar}}
@@ -55,4 +50,5 @@
 		</footer>
 		{{ function('wp_footer') }}
 	{% endblock %}
-</body></html></body>
+</body>
+</html>

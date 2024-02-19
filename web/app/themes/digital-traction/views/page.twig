@@ -1,8 +1,9 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<div class="content-wrapper">
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+<div class="container">
+	<div class="row">
+		<article class="post-type-{{post.post_type}} col-12 col-md-12" id="post-{{post.ID}}">
 			<section class="article-content">
 				<h1 class="article-h1">{{post.title}}</h1>
 				<div class="article-body">
@@ -10,5 +11,6 @@
 				</div>
 			</section>
 		</article>
-	</div><!-- /content-wrapper -->
+	</div>
+</div>
 {% endblock %}

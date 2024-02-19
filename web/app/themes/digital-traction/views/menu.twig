@@ -1,10 +1,24 @@
-{% if menu %}
+{% if items %}
 	<ul class="navbar-nav mb-2 mb-lg-0">
 		{% for item in items %}
-			<li class="nav-item {{ item.classes | join(' ') }} {{ item.active ? 'active' : '' }}">
-				<a target="{{ item.target }}" href="{{ item.link }}" class="nav-link">{{ item.title }}</a>
-				{# {% include "menu.twig" with {'items': item.children} %} #}
-			</li>
+			{% if item.children %}
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						{{ item.title }}
+					</a>
+					<ul class="dropdown-menu">
+						{% for child in item.children %}
+							<li>
+								<a class="dropdown-item" href="{{ child.link }}">{{ child.title }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</li>
+			{% else %}
+				<li class="nav-item {{ item.classes | join(' ') }} {{ item.active ? 'active' : '' }}">
+					<a target="{{ item.target }}" href="{{ item.link }}" class="nav-link">{{ item.title }}</a>
+				</li>
+			{% endif %}
 		{% endfor %}
 	</ul>
 {% endif %}

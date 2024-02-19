@@ -1,1 +1,23 @@
-Copyright {{"now"|date('Y')}}
+<footer id="footer">
+	<div class="wrapper">
+		<div class="container" tabindex="-1">
+			<div class="row">
+				{{ fn('dynamic_sidebar', 'footerfull' ) }}
+			</div>
+		</div>
+	</div>
+
+	<div id="wrapper-footer" class="bg-light py-3">
+		<div class="wrapper">
+			<div class="container">
+				<div class="row">
+					<div id="site-info" class="col-md-12">
+						Copyright {{"now"|date('Y')}} | Site by <a href="https://stafflink.com.au/" target="_blank">STAFFLINK</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
